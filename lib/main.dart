@@ -1,115 +1,78 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() {
+import 'Screen/about.dart';
+import 'Screen/disaese/arthralgia.dart';
+import 'Screen/disaese/commoncold.dart';
+import 'Screen/disaese/eczema.dart';
+import 'Screen/disaese/heart.dart';
+import 'Screen/disaese/hepatitis.dart';
+import 'Screen/disaese/laryngitis.dart';
+import 'Screen/disaese/trachoma.dart';
+
+import 'Screen/doctors/doctorgirl.dart';
+import 'Screen/doctors/doctors.dart';
+import 'Screen/nifedipine.dart';
+
+import 'Screen/diseases.dart';
+import 'Screen/healthy.dart';
+import 'Screen/informtion.dart';
+import 'Screen/inhalers.dart';
+import 'Screen/heparin.dart';
+import 'Screen/acomal_medicine.dart';
+import 'Screen/lunch_screen.dart';
+import 'Screen/main_screen.dart';
+import 'Screen/medicine.dart';
+import 'Screen/out_bording_screen.dart';
+import 'Screen/diclofenac.dart';
+import 'Screen/lidocaine_medicine.dart';
+import 'Screen/pref/shared_pref_controler.dart';
+import 'Screen/widget/gentamicin.dart';
+
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPrefController().initSharePref();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+    return ScreenUtilInit(
+      designSize: Size(921,375),
+      builder: ()=> MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute:'/lunch_screen' ,
+        routes: {
+          '/lunch_screen':(context)=>LunchScreen(),
+          '/bording_screen':(context)=>OutBordingScreen(),
+          '/main_screen':(context)=>MainScreen(),
+          '/medicine_screen':(context)=> medicineScren(),
+          '/diseases_screen':(context)=>DiseasesScreen(),
+          '/doctors_screen':(context)=>DoctorsScreen(),
+          '/doctorsGirl_screen':(context)=>DoctorsGirlScreen(),
+         '/acmoal_liguids':(context)=> AcamolMedicine(),
+          '/aboute_screen':(context)=>AbouteScreen(),
+          '/information_screen':(context)=>InformationScreen(),
+          '/capsule_screen':(context)=>NifedipineMedicine(),
+          '/topical_screen':(context)=>LidocaineMedicine(),
+          '/drops_screen':(context)=>GentamicinMedicine(),
+          '/inhalers_screen':(context)=>SHORTActingMedicine(),
+          '/suppository_screen':(context)=>DiclofenacMedicine(),
+          '/injection_screen':(context)=>HeparinMedicine(),
+          '/eyes_screen':(context)=>EyesDiseases(),
+          '/laryngitis_screen':(context)=>LaryngitisDiseases(),
+          '/heartAttack_screen':(context)=>HeartAttack(),
+          '/eczemadiseases_screen':(context)=>EczemaDiseases(),
+          '/hepatitisB_screen':(context)=>HepatitisB(),
+          '/arthralgiaDisease_screen':(context)=>ArthralgiaDisease(),
+          '/commonCold_screen':(context)=>CommonCold(),
+        '/healthy_screen':(context)=>HealthyScreen()
+        }
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
+// child: Text('',style: TextStyle(fontWeight: FontWeight.w800,fontSize: 16),),
