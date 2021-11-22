@@ -40,7 +40,7 @@ class _drawerState extends State<drawer> {
             leading:Container(
               height: 50,
                 child: Image.asset('images/liquid.png')),
-            title: Text('Medicine',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+            title: Text('Medicine',style: TextStyle(fontFamily: 'SourceCodePro',fontWeight: FontWeight.bold,fontSize: 18)),
             trailing: Icon(Icons.arrow_forward_ios),
           ),
           SizedBox(height: 20,),
@@ -55,7 +55,7 @@ class _drawerState extends State<drawer> {
             leading:Container(
                 height: 50,
                 child: Image.asset('images/e.jpg')),
-            title: Text('Diseases',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+            title: Text('Diseases',style: TextStyle(fontFamily: 'SourceCodePro',fontWeight: FontWeight.bold,fontSize: 18)),
             trailing: Icon(Icons.arrow_forward_ios),
           ),
           SizedBox(height: 20,),
@@ -76,7 +76,7 @@ class _drawerState extends State<drawer> {
                 });
               },
               leading: Icon(Icons.info,size: 40, color: HexColor('#17D4C3'),),
-              title: Text('About',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+              title: Text('About',style: TextStyle(fontFamily: 'SourceCodePro',fontWeight: FontWeight.bold,fontSize: 18)),
           ),
           SizedBox(height: 10,),
           ListTile(
@@ -88,7 +88,7 @@ class _drawerState extends State<drawer> {
               });
             },
             leading: Icon(FontAwesomeIcons.personBooth,size: 40, color: HexColor('#17D4C3'),),
-            title: Text('Healthy',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+            title: Text('Healthy',style: TextStyle(fontFamily: 'SourceCodePro',fontWeight: FontWeight.bold,fontSize: 18)),
           ),
         ],
       ),

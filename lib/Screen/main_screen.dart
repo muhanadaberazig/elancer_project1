@@ -62,14 +62,6 @@ class _MainScreenState extends State<MainScreen> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 16, left: 17),
-                    child: SizedBox(
-                        height: 50,
-                        width: 50,
-                        child: SvgPicture.asset('images/i.svg')
-                    ),
-                  ),
                 ],
               ),
               Row(
@@ -83,6 +75,7 @@ class _MainScreenState extends State<MainScreen> {
                         child: Text(
                           'Catalogues',
                           style: TextStyle(
+                              fontFamily: 'SourceCodePro',
                             color: HexColor('#36596A'),
                               fontStyle: FontStyle.normal,
                               fontWeight: FontWeight.w500,
@@ -168,8 +161,9 @@ class _MainScreenState extends State<MainScreen> {
                     child: Text(
                       'Kinds of Medicines',
                       style: TextStyle(
+                          fontFamily: 'SourceCodePro',
                           fontStyle: FontStyle.normal,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.bold,
                           fontSize: 19,color: HexColor('#36596A')),
                     ),
                   ),
@@ -180,8 +174,8 @@ class _MainScreenState extends State<MainScreen> {
                         padding: EdgeInsets.only(top: 23.43),
                         child: SizedBox(
                             height: 18,
-                            width: 61.67,
-                            child: Text('View all ',style: TextStyle(color:Colors.grey,fontSize: 16,fontWeight: FontWeight.w400,fontStyle: FontStyle.normal),)
+                            width: 70,
+                            child: Text('View all ',style: TextStyle(fontFamily: 'SourceCodePro',color:Colors.grey,fontSize: 16,fontWeight: FontWeight.w400,fontStyle: FontStyle.normal),)
                         ),
                       )),
 
@@ -276,8 +270,9 @@ class _MainScreenState extends State<MainScreen> {
                     child: Text(
                       'Kinds of Diseases',
                       style: TextStyle(
+                          fontFamily: 'SourceCodePro',
                           fontStyle: FontStyle.normal,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.bold,
                           fontSize: 19,color: HexColor('#36596A')),
                     ),
                   ),
@@ -289,7 +284,7 @@ class _MainScreenState extends State<MainScreen> {
                         child: SizedBox(
                             height: 18,
                             width: 61.67,
-                            child: Text('View all ',style: TextStyle(color:Colors.grey,fontSize: 16,fontWeight: FontWeight.w400,fontStyle: FontStyle.normal),)
+                            child: Text('View all ',style: TextStyle(fontFamily: 'SourceCodePro',color:Colors.grey,fontSize: 16,fontWeight: FontWeight.w400,fontStyle: FontStyle.normal),)
                         ),
                       )),
 
@@ -384,20 +379,13 @@ class _MainScreenState extends State<MainScreen> {
                     child: Text(
                       'Doctors',
                       style: TextStyle(
+                          fontFamily: 'SourceCodePro',
                           fontStyle: FontStyle.normal,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.bold,
                           fontSize: 19),
                     ),
                   ),
-                  TextButton(onPressed: () {},
-                      child: const Padding(
-                        padding: EdgeInsets.only(top: 23.43),
-                        child: SizedBox(
-                            height: 18,
-                            width: 61.67,
-                            child: Text('View all ',style: TextStyle(color:Colors.grey,fontSize: 16,fontWeight: FontWeight.w400,fontStyle: FontStyle.normal),)
-                        ),
-                      )),
+
 
                 ],
               ),

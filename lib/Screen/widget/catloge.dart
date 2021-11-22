@@ -19,7 +19,7 @@ class Catloge extends StatelessWidget {
           width: 62,
           child: Padding(
             padding: const EdgeInsets.only(top: 15,right: 0,left: 0,bottom: 16),
-            child: Text(text,style: TextStyle(color: HexColor('#36596A'),fontSize: 16,fontWeight: FontWeight.w500),),
+            child: Text(text,style: TextStyle(fontFamily: 'SourceCodePro',color: HexColor('#36596A'),fontSize: 16,fontWeight: FontWeight.w500),),
           )),
 
     );

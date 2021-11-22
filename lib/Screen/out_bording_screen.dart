@@ -45,6 +45,7 @@ class _OutBordingScreenState extends State<OutBordingScreen> {
               child: Text('Get connect our best Doctors',
                   textAlign: TextAlign.center,
                   style: TextStyle(
+                      fontFamily: 'SourceCodePro',
                       fontSize: 20,
                       fontWeight: FontWeight.w500,
                       fontStyle: FontStyle.normal)),
@@ -55,7 +56,7 @@ class _OutBordingScreenState extends State<OutBordingScreen> {
                   'Get the most famous international medicines and know the diseases',
                   textAlign: TextAlign.center,
                   style:
-                      TextStyle(fontSize: 15, fontWeight: FontWeight.w400)),
+                      TextStyle(fontFamily: 'SourceCodePro',fontSize: 15, fontWeight: FontWeight.w400)),
             ),
             SizedBox(height: 20,),
             Padding(
@@ -74,7 +75,7 @@ class _OutBordingScreenState extends State<OutBordingScreen> {
                         padding: EdgeInsets.only(top: 16),
                         child: Text(
                           'Next',
-                          style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18,fontStyle: FontStyle.normal, ),
+                          style: TextStyle(fontFamily: 'SourceCodePro',fontWeight: FontWeight.w500,fontSize: 18,fontStyle: FontStyle.normal, ),
                           textAlign: TextAlign.center,
                         ),
                       ),

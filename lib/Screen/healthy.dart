@@ -14,44 +14,44 @@ class _HealthyScreenState extends State<HealthyScreen> {
   String goodstate="";
 
   void state(){
-    if(SharedPrefController().resultt<=15.0){
+    if(SharedPrefController().resultt<15.0){
       setState(() {
         goodh="Very severe weight loss";
         goodstate='Eating a lot of meat, eggs, bread, tahini, avocado, dates, as well as olive oil. Avoid drinking alcohol and drinks that contribute to burning fat';
       });
     }
-    else if (SharedPrefController().resultt>=15.0||SharedPrefController().resultt<=16.0){
+    else if (SharedPrefController().resultt>=15.0&&SharedPrefController().resultt<=16.0){
       setState(() {
         goodh='Severe weight loss';
         goodstate='Eating a lot of meat, eggs, bread, tahini, avocado, dates, as well as olive oil. Avoid drinking alcohol and drinks that contribute to burning fat';
 
       });
-    } else if (SharedPrefController().resultt>=16.0||SharedPrefController().resultt<=18.5){
+    } else if (SharedPrefController().resultt>16.0&&SharedPrefController().resultt<=18.5){
       setState(() {
         goodh='Weight loss';
         goodstate='Eat meat, eggs, bread, tahini, avocado, dates, as well as olive oil, taking care not to overeat. Avoid drinking alcohol and drinks that contribute to burning fat.';
       });
-    } else if (SharedPrefController().resultt>=18.5||SharedPrefController().resultt<=25){
+    } else if (SharedPrefController().resultt>18.5&&SharedPrefController().resultt<=25){
       setState(() {
         goodh='normal weight';
         goodstate='Eating reasonably and appropriately while not eating too much that causes obesity and using sports';
       });
-    } else if (SharedPrefController().resultt>=25||SharedPrefController().resultt<=30){
+    } else if (SharedPrefController().resultt>25&&SharedPrefController().resultt<=30){
       setState(() {
         goodh='Increase in weight';
         goodstate='drink a lot of waterAnd use smaller platesAnd reduce your alcohol intakeEat foods rich in fiberand exercise';
       });
-    } else if (SharedPrefController().resultt>=30||SharedPrefController().resultt<=35){
+    } else if (SharedPrefController().resultt>30&&SharedPrefController().resultt<=35){
       setState(() {
         goodh='first degree obesity';
         goodstate='Eat five small meals a day. Avoid processed foods, reduce sugar consumption, reduce use of artificial sweeteners, avoid saturated fats, and cook at home. Try a plant-based diet.';
       });
-    } else if (SharedPrefController().resultt>=35||SharedPrefController().resultt<=40){
+    } else if (SharedPrefController().resultt>35&&SharedPrefController().resultt<=40){
       setState(() {
         goodh='second degree obesity';
         goodstate='Commitment to a healthy diet, with various activities, and it is recommended to focus on eating a lot of fruits, vegetables, and whole grains, in addition to drinking plenty of water.';
       });
-    } else if (SharedPrefController().resultt>=40){
+    } else if (SharedPrefController().resultt>40){
       setState(() {
         goodh='Too obese';
         goodstate='Drink plenty of water It may sound simple, but drinking water is a great way to avoid adding too many calories to your diet.Use smaller plates Reduce alcohol intake Eat foods rich in fiber Donn\'t forget to exercise';
@@ -109,10 +109,11 @@ class _HealthyScreenState extends State<HealthyScreen> {
                   Text(
                     'My Profile',
                     textAlign: TextAlign.center,
-
                     style: TextStyle(
+                      fontFamily: 'SourceCodePro',
+                      fontWeight: FontWeight.bold,
                       color: HexColor('#36596A'),
-                      fontSize: 34,
+                      fontSize: 30,
                     ),
                   ),
                   const SizedBox(
@@ -146,6 +147,8 @@ class _HealthyScreenState extends State<HealthyScreen> {
                                     Text(
                                       SharedPrefController().namee,
                                       style: TextStyle(
+                                        fontFamily: 'SourceCodePro',
+                                        fontWeight: FontWeight.bold,
                                         color:  HexColor('#36596A'),
                                         fontSize: 37,
                                       ),
@@ -163,6 +166,8 @@ class _HealthyScreenState extends State<HealthyScreen> {
                                               child: Text(
                                                 'Height',
                                                 style: TextStyle(
+                                                  fontFamily: 'SourceCodePro',
+                                                  fontWeight: FontWeight.bold,
                                                   color:  HexColor('#36596A'),
                                                   fontSize: 25,
                                                 ),
@@ -203,6 +208,8 @@ class _HealthyScreenState extends State<HealthyScreen> {
                                             Text(
                                               'Width',
                                               style: TextStyle(
+                                                fontFamily: 'SourceCodePro',
+                                                fontWeight: FontWeight.bold,
                                                 color:  HexColor('#36596A'),
                                                 fontSize: 25,
                                               ),
@@ -236,7 +243,8 @@ class _HealthyScreenState extends State<HealthyScreen> {
                                             Text(
                                               'Age',
                                               style: TextStyle(
-
+                                                fontFamily: 'SourceCodePro',
+                                                fontWeight: FontWeight.bold,
                                                 color:  HexColor('#36596A'),
                                                 fontSize: 25,
                                               ),
@@ -299,7 +307,9 @@ class _HealthyScreenState extends State<HealthyScreen> {
                             padding: const EdgeInsets.only(left: 95),
                             child: Text(
                               'My Healthy',
-                              style: TextStyle(fontWeight: FontWeight.w800,
+                              style: TextStyle(
+                                fontFamily: 'SourceCodePro',
+                                fontWeight: FontWeight.bold,
                                 color:  HexColor('#36596A'),
                                 fontSize: 27,
                               ),
@@ -316,24 +326,32 @@ class _HealthyScreenState extends State<HealthyScreen> {
                             children: [
                               Container(
                                 height:30,
-                                  child: Text('Health status :',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w900,color: HexColor('#36596A')),)),
+                                  child: Text('Health status :',style: TextStyle(fontFamily: 'SourceCodePro',
+                                      fontWeight: FontWeight.bold,fontSize: 20,color: HexColor('#36596A')),)),
                               const SizedBox(
                                 height:5,
                               ),
                               Container(
                                   height:30,
-                                  child: Text(' $goodh',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700,color: Colors.grey[700]),)),
+                                  child: Text(' $goodh',style: TextStyle(fontFamily: 'SourceCodePro', fontSize: 18,fontWeight: FontWeight.w700,color: Colors.grey[700]),)),
                               const Divider(
                                 thickness: 2.5,
                               ),
                               const SizedBox(height: 5,),
                               SizedBox(
                                   height:30,
-                                  child: Text('Tips :',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w900,color: HexColor('#36596A')),)),
+                                  child: Text('Tips :',style: TextStyle(fontFamily: 'SourceCodePro',
+                                      fontWeight: FontWeight.bold,fontSize: 20,color: HexColor('#36596A')),)),
                               SizedBox(
                                   height:100,
                                   width: double.infinity,
-                                  child: Text(' $goodstate',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w700, color: Colors.grey[700]),)),
+                                  child: ListView(
+                                    padding: EdgeInsets.zero,
+                                    children: [
+                                      Text(' $goodstate',style: TextStyle(fontFamily: 'SourceCodePro',
+                                          fontSize: 18,fontWeight: FontWeight.w700, color: Colors.grey[700]),),
+                                    ],
+                                  )),
                             ],
                           )
                         ],

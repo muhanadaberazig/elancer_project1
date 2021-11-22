@@ -41,6 +41,7 @@ class typeofmedicine extends StatelessWidget {
               text,
               textAlign: TextAlign.center,
               style:  TextStyle(
+                  fontFamily: 'SourceCodePro',
                   fontStyle: FontStyle.normal,
                   fontWeight: FontWeight.w900,
                   fontSize: 15,color: HexColor('#36596A')),
