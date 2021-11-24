@@ -14,8 +14,11 @@ class _LunchScreenState extends State<LunchScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, '/bording_screen');
+    Future.delayed(const Duration(seconds: 3), () {
+      String route = SharedPrefController().loggedIn
+          ? '/main_screen'
+          : '/information_screen';
+      Navigator.pushReplacementNamed(context, route);
     });
   }
 
